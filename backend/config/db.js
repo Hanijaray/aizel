@@ -1,12 +1,17 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-    console.log("MongoDB Connected");
+    await mongoose.connect(
+      "mongodb+srv://alphanewprojectlc:CEoMY7QsrBIJokk3@aizeldb.nuoy3.mongodb.net/aizelDB?retryWrites=true&w=majority",
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
+    console.log("✅ MongoDB Connected Successfully!");
   } catch (error) {
-    console.error("DB Connection Failed", error);
+    console.error("❌ DB Connection Failed:", error.message);
     process.exit(1);
   }
 };
