@@ -19,7 +19,7 @@ app.use(express.json()); // Ensure this line is present
 
 // ✅ Allow CORS for API routes
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow requests from your React frontend
+  origin: 'https://aizel.netlify.app/', // Allow requests from your React frontend
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Ensure PATCH is included
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -27,7 +27,7 @@ app.use(cors({
 // ✅ Allow CORS for WebSocket connections
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:3000"], // Change this to match frontend port
+        origin: ["https://aizel.netlify.app/"], // Change this to match frontend port
         methods: ["GET", "POST"]
     }
 });
