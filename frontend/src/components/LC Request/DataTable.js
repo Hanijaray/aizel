@@ -22,7 +22,7 @@ function DataTable({ workers, onEditdatatable,onSelectWorker}) {
 
   const fetchApprovedRequests = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/workers/approved"); 
+      const response = await axios.get("https://aizel-lyaq.onrender.com/api/workers/approved"); 
       setApprovedRequests(response.data);
     } catch (error) {
       console.error("Error fetching approved access requests:", error);

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://aizel-lyaq.onrender.com");
 
  function Logincard() {
   const [showFifthPopup, setShowFifthPopup] = useState(false);
@@ -20,7 +20,7 @@ const socket = io("http://localhost:5000");
     setErrorMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/drivers/login", {
+      const response = await fetch("https://aizel-lyaq.onrender.com/api/drivers/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ employeeId, password }),

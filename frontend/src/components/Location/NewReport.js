@@ -27,7 +27,7 @@ function handleSaveReport() {
     formData.append("photo", photoInput.files[0]);
   }
 
-  axios.post("http://localhost:5000/api/reports", formData, {
+  axios.post("https://aizel-lyaq.onrender.com/api/reports", formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },

@@ -38,7 +38,7 @@ const Dashboard = () => {
   // Fetch reports from API
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/reports") // Replace with your actual API URL
+      .get("https://aizel-lyaq.onrender.com/api/reports") // Replace with your actual API URL
       .then((response) => setReports(response.data))
       .catch((error) => console.error("Error fetching reports:", error));
   }, []);

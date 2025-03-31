@@ -39,7 +39,7 @@ const AnnouncementHistory = () => {
     const fetchAnnouncements = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/announcements"
+          "https://aizel-lyaq.onrender.com/api/announcements"
         ); // Change URL if needed
         setAnnouncements(response.data);
       } catch (error) {

@@ -60,10 +60,10 @@ const TaskForm = ({ fetchTasks, editTask, setEditTask }) => {
 
     try {
       if (editTask) {
-        await axios.put(`http://localhost:5000/tasks/update/${editTask._id}`, taskData);
+        await axios.put(`https://aizel-lyaq.onrender.com/tasks/update/${editTask._id}`, taskData);
         alert("✅ Task Updated Successfully!");
       } else {
-        await axios.post("http://localhost:5000/tasks/add", taskData);
+        await axios.post("https://aizel-lyaq.onrender.com/tasks/add", taskData);
         alert("✅ Task Added Successfully!");
       }
       fetchTasks();

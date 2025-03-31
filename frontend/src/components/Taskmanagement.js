@@ -17,7 +17,7 @@ const TaskManagement = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/tasks");
+      const response = await axios.get("https://aizel-lyaq.onrender.com/tasks");
       const today = new Date().toISOString().split('T')[0];
       const filteredTasks = response.data.filter(task => 
         (task.state === 'Pending' || task.state === 'New') && 
@@ -31,7 +31,7 @@ const TaskManagement = () => {
 
   const updateTaskState = async (taskId, state) => {
     try {
-      await axios.put(`http://localhost:5000/tasks/${taskId}`, { state });
+      await axios.put(`https://aizel-lyaq.onrender.com/tasks/${taskId}`, { state });
       fetchTasks();
       setShowSecondPopup(false);
       setShowThirdPopup(false);

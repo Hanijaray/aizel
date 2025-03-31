@@ -46,7 +46,7 @@ const AddAnnouncement = ({ onClose, onSubmit, selectedAnnouncement }) => {
   useEffect(() => {
     const fetchEmployeeNames = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/drivers/employee-names");
+        const response = await axios.get("https://aizel-lyaq.onrender.com/api/drivers/employee-names");
         setApprovedEmployees(response.data); // Store employee names
       } catch (error) {
         console.error("Error fetching employee names:", error);
@@ -69,13 +69,13 @@ const AddAnnouncement = ({ onClose, onSubmit, selectedAnnouncement }) => {
       if (selectedAnnouncement) {
         // 🟢 If editing, send a PUT request
         await axios.put(
-          `http://localhost:5000/api/announcements/${selectedAnnouncement._id}`,
+          `https://aizel-lyaq.onrender.com/api/announcements/${selectedAnnouncement._id}`,
           formData
         );
         alert("Announcement updated successfully!");
       } else {
         //  If adding new, send a POST request
-        await axios.post("http://localhost:5000/api/announcements", formData);
+        await axios.post("https://aizel-lyaq.onrender.com/api/announcements", formData);
         alert("Announcement added successfully!");
       }
     } catch (error) {

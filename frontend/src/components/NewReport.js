@@ -57,7 +57,7 @@ useEffect(() => {
 
 function handleSaveReport() {
 axios
-  .post("http://localhost:5000/api/reports/submit", formData)
+  .post("https://aizel-lyaq.onrender.com/api/reports/submit", formData)
   .then((response) => {
     console.log("Report saved:", response.data);
     alert("Report saved successfully!");

@@ -21,7 +21,7 @@ const driverIcon = new L.Icon({
   popupAnchor: [0, -30],
 });
 
-const socket = io("http://localhost:5000"); // Update with your backend URL
+const socket = io("https://aizel-lyaq.onrender.com"); // Update with your backend URL
 
 const MapCard = ({ driverId }) => {
   const [driverLocation, setDriverLocation] = useState(null);

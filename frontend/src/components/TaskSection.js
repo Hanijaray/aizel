@@ -16,7 +16,7 @@ const TaskSection = ({ title, tasks, color, updateTaskState, nextState }) => {
 
   const handleStateUpdate = async (task, state) => {
     try {
-      await axios.put(`http://localhost:5000/tasks/${task._id}`, { state });
+      await axios.put(`https://aizel-lyaq.onrender.com/tasks/${task._id}`, { state });
       updateTaskState();
       closePopup();
     } catch (error) {

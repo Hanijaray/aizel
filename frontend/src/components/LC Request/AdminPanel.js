@@ -7,7 +7,7 @@ const AdminPanel = () => {
   // ✅ Function to Fetch Pending Requests
   const fetchPendingRequests = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/accessRequests/pending");
+      const response = await axios.get("https://aizel-lyaq.onrender.com/api/accessRequests/pending");
       setPendingRequests(response.data);
     } catch (error) {
       console.error("Error fetching access requests:", error);
@@ -22,7 +22,7 @@ const AdminPanel = () => {
   // ✅ Approve Request & Refresh Data
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/api/accessRequests/${id}/approve`);
+      await axios.patch(`https://aizel-lyaq.onrender.com/api/accessRequests/${id}/approve`);
       alert("✅ Access Request Approved and stored in Worker!");
       fetchPendingRequests(); // ⬅️ Refresh Data from Backend
     } catch (error) {
@@ -33,7 +33,7 @@ const AdminPanel = () => {
   // ❌ Reject Request & Refresh Data
   const handleReject = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/api/accessRequests/${id}/reject`);
+      await axios.patch(`https://aizel-lyaq.onrender.com/api/accessRequests/${id}/reject`);
       alert("❌ Access Request Rejected!");
       fetchPendingRequests(); // ⬅️ Refresh Data from Backend
     } catch (error) {

@@ -14,7 +14,7 @@ export default function AttendanceHistory() {
   useEffect(() => {
     const fetchAttendance = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/attendance");
+        const response = await axios.get("https://aizel-lyaq.onrender.com/api/attendance");
         setAttendanceData(response.data);
       } catch (error) {
         console.error("Error fetching attendance data:", error);

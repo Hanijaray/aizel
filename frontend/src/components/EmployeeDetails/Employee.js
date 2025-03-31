@@ -16,7 +16,7 @@ export default function ProfileHeader() {
   useEffect(() => {
     const fetchWorker = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/workers/first"); 
+        const response = await axios.get("https://aizel-lyaq.onrender.com/api/workers/first"); 
         setWorker(response.data);
       } catch (err) {
         setError("Failed to fetch worker details");
@@ -31,7 +31,7 @@ export default function ProfileHeader() {
         {/* Welcome Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center sm:p-4 rounded space-y-4 sm:space-y-0">
                 <div className="flex items-center space-x-4">
-                    <img src={`http://localhost:5000/${worker?.profilePhoto}`} className="w-16 h-16 hidden sm:flex sm:w-24 sm:h-24 rounded-full object-cover border" alt="Profile" />
+                    <img src={`https://aizel-lyaq.onrender.com/${worker?.profilePhoto}`} className="w-16 h-16 hidden sm:flex sm:w-24 sm:h-24 rounded-full object-cover border" alt="Profile" />
                     <div>
                         <h2 className="hidden sm:flex text-lg font-bold">Welcome Back!</h2>
                         <p className="hidden sm:flex">{worker?.employeeName || "Loading..."}</p>
@@ -62,7 +62,7 @@ export default function ProfileHeader() {
         <div className="sm:p-4 p-2 flex items-center justify-center space-x-4 sm:space-x-6">
         <img
           className="w-20 h-20 sm:w-28 sm:h-28 border-2 rounded-xl border-gray-300 object-cover"
-          src={`http://localhost:5000/${worker?.profilePhoto}`}
+          src={`https://aizel-lyaq.onrender.com/${worker?.profilePhoto}`}
           alt="Employee"
         />
         <div className="text-left">

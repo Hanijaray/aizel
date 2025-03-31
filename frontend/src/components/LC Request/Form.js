@@ -95,7 +95,7 @@ const Form = () => {
   
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/accessRequests",
+        "https://aizel-lyaq.onrender.com/api/accessRequests",
         formDataToSend,
         {
           headers: {
@@ -114,7 +114,7 @@ const Form = () => {
   const handleEditdatatable = async (workerId) => {
     console.log("Fetching worker details for:", workerId );
     try {
-      const response = await axios.get(`http://localhost:5000/api/workers/${workerId}`);
+      const response = await axios.get(`https://aizel-lyaq.onrender.com/api/workers/${workerId}`);
       console.log("Worker data received:", response.data);
   
       const workerToEdit = response.data;
@@ -147,7 +147,7 @@ const handleUpdate = async () => {
 
   try {
     const response = await axios.put(
-      `http://localhost:5000/api/workers/${editingWorkerIndex}`,
+      `https://aizel-lyaq.onrender.com/api/workers/${editingWorkerIndex}`,
       formData
     );
 

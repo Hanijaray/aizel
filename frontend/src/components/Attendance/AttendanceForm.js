@@ -14,7 +14,7 @@ export default function AttendanceForm() {
   useEffect(() => {
     const fetchApprovedEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/workers/approved");
+        const response = await axios.get("https://aizel-lyaq.onrender.com/api/workers/approved");
         console.log("Approved Employees:", response.data); // Debugging
         setApprovedEmployees(response.data);
       } catch (error) {
@@ -47,7 +47,7 @@ export default function AttendanceForm() {
     };
   
     try {
-      const response = await axios.post("http://localhost:5000/api/attendance/submit", attendanceData);
+      const response = await axios.post("https://aizel-lyaq.onrender.com/api/attendance/submit", attendanceData);
       alert(response.data.message);
       setLoginTime("");
       setLogoutTime("");

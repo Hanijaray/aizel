@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:5000"); // Ensure the Node.js server is running
+const socket = io("https://aizel-lyaq.onrender.com"); // Ensure the Node.js server is running
 
 const DriverLocationTracker = () => {
   const navigate = useNavigate();
