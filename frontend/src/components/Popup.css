@@ -1,9 +1,0 @@
-.fixed-popup {
-    z-index: 50;
-    position: fixed;
-  }
-  
-  .map-container {
-    z-index: 1;
-    position: relative;
-  }
